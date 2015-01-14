@@ -13,6 +13,10 @@ class BooksController < ApplicationController
     redirect_to books_path, notice: "Book created."
   end
 
+  def show
+    @book = Book.find(params[:id])
+  end
+
   private
 
   def book_params
