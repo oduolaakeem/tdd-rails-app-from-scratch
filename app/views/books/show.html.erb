@@ -1,1 +1,5 @@
 <%= link_to "Loan", new_book_loan_path(@book) %>
+
+<% if @book.on_loan? %>
+  <p>This book is on loan</p>
+<% end %>
